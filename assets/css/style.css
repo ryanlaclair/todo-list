@@ -41,7 +41,6 @@ input {
   padding: 0 20px;
   border: 3px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
-  display: none;
 }
 
 input:focus {
@@ -56,6 +55,7 @@ input:focus {
 }
 
 .fa-plus {
+  padding-top: 3px;
   float: right;
 }
 
@@ -71,14 +71,24 @@ input:focus {
   transition: 0.2s linear;
 }
 
-.hoverTarget:hover .remove {
+.hover-target:hover .remove {
   width: 40px;
   opacity: 1;
 }
 
-#container {
+#list-container {
   width: 360px;
   margin: 50px auto;
   background: #f7f7f7;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+#input-container {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+#new-item {
+  display: none;
 }
