@@ -15,20 +15,18 @@ h1 {
   font-weight: normal;
 }
 
-ul {
-  list-style: none;
+.ul {
   margin: 0;
   padding: 0;
 }
 
-li {
+.li {
   background: white;
-  height: 40px;
   line-height: 40px;
   color: #666;
 }
 
-li:nth-child(2n) {
+.li:nth-child(2n) {
   background: #f7f7f7;
 }
 
@@ -74,6 +72,12 @@ input:focus {
 .hover-target:hover .remove {
   width: 40px;
   opacity: 1;
+}
+
+.left {
+  display: block;
+  float: left;
+  clear: both;
 }
 
 #list-container {

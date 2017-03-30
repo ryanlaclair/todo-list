@@ -32,7 +32,7 @@ $(document).ready(function() {
   function saveListItem() {
     var newItem = inputBox.val();
     inputBox.val("");
-    $("ul").append("<li id='new-item'><span class='hover-target'><span class='remove'><i class='fa fa-minus'></i></span> </span>" + newItem + "</li>");
+    $(".ul").append("<div id='new-item' class='li'><span class='hover-target'><span class='remove'><i class='fa fa-minus'></i></span> </span>" + newItem + "</div>");
     
     $("#new-item").slideDown(150);
     $("#new-item").removeAttr("id");
@@ -59,7 +59,7 @@ $(document).ready(function() {
     event.stopPropagation();
   });
 
-  $("ul").on("click", "li", crossOffListItem);
+  $(".ul").on("click", ".li", crossOffListItem);
 
   inputBox.keypress(function(event) {
     if (event.which === 13) {
@@ -67,7 +67,7 @@ $(document).ready(function() {
     }
   });
 
-  $("ul").on("click", ".remove", deleteListItem);
+  $(".ul").on("click", ".remove", deleteListItem);
 
 });
 
