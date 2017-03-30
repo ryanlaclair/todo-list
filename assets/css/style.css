@@ -15,18 +15,20 @@ h1 {
   font-weight: normal;
 }
 
-.ul {
+.table {
   margin: 0;
   padding: 0;
 }
 
-.li {
-  background: white;
+.row {
+  width: 100%;
+  background: #fff;
   line-height: 40px;
   color: #666;
+  display: flex;
 }
 
-.li:nth-child(2n) {
+.row:nth-child(2n) {
   background: #f7f7f7;
 }
 
