@@ -17,8 +17,9 @@ $(document).ready(function() {
         .animate(
           { opacity: 1 },
           { queue: false, duration: 250 });
-      inputBox.focus();
     }
+
+    inputBox.focus();
   }
 
   function hideInputBox(event) {
