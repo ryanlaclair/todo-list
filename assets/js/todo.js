@@ -12,7 +12,11 @@ $(document).ready(function() {
       saveListItem();
     }
     else {
-      inputContainer.slideDown(150);
+      inputContainer
+        .slideDown(200)
+        .animate(
+          { opacity: 1 },
+          { queue: false, duration: 250 });
       inputBox.focus();
     }
   }
@@ -20,8 +24,12 @@ $(document).ready(function() {
   function hideInputBox(event) {
     if (this.id != "list-container") {
       if (inputContainer.is(":visible")) {
-        inputContainer.slideUp(150);
-     }
+        inputContainer
+          .slideUp(250)
+          .animate(
+            { opacity: 0 },
+            { queue: false, duration: 200 });
+      }
     }
   }
 
@@ -34,16 +42,26 @@ $(document).ready(function() {
     inputBox.val("");
     $(".list").append("<div class='item' id='new-item'><div class='item-content'><div class='hover-target'><div class='remove'><i class='fa fa-minus'></i></div> </div><div>" + newItem + "</div></div></div>");
     
-    $("#new-item").slideDown(150);
+    $("#new-item")
+      .slideDown(200)
+      .css(
+        { opacity: 0})
+      .animate(
+        { opacity: 1 },
+        { queue: false, duration: 250 });
     $("#new-item").removeAttr("id");
   }
 
   function deleteListItem(event) {
     event.stopPropagation();
 
-    $(this).parent().parent().slideUp(150, function() {
-      $(this).remove();
-    });
+    $(this).parent().parent()
+      .slideUp(250, function() {
+        $(this).remove();
+      })
+      .animate(
+        { opacity: 0 },
+        { queue: false, duration: 200});
 
     inputBox.focus();
   }

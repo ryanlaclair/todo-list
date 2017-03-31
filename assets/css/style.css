@@ -68,7 +68,7 @@ input:focus {
   color: white;
   display: inline-block;
   opacity: 0;
-  transition: 0.2s linear;
+  transition: 250ms linear;
 }
 
 .hover-target:hover .remove {
@@ -93,6 +93,7 @@ input:focus {
   margin: 0;
   padding: 0;
   display: none;
+  opacity: 0;
 }
 
 #new-item {
